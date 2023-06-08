@@ -45,11 +45,19 @@ public class BallController : MonoBehaviour
     public void QuitarMovementX()
     {
         myRGBD.velocity = new Vector3(0, (myRGBD.velocity.y));
+        materialController.ChangeEmissionColor(MaterialChange.OnOnlyVertical);
     }
 
     public void QuitarMovementY()
     {
         myRGBD.velocity = new Vector3(myRGBD.velocity.x, 0);
+        materialController.ChangeEmissionColor(MaterialChange.OnOnlyHorizontal);
+    }
+
+    public void QuitandoGravedad()
+    {
+      
+        materialController.ChangeEmissionColor(MaterialChange.OnLooseGravity);
     }
 
 
