@@ -2,8 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
+
+/*
+ {
 public class GameManager : MonoBehaviour
-{
+
     [SerializeField] private GameDataScriptableObject currentData;
 
     // Start is called before the first frame update
@@ -15,3 +20,27 @@ public class GameManager : MonoBehaviour
         Debug.Log(currentData.yAcceleration);
     }
 }
+ 
+*/
+
+
+public class GameManager : MonoBehaviour
+{
+    [SerializeField] private GameDataScriptableObject currentData;
+    private int currentLevel = 1;
+
+    private void Start()
+    {
+        Physics.gravity = new Vector3(currentData.xAcceleration, currentData.gravity + currentData.yAcceleration, 0f);
+
+        Debug.Log(currentData.xAcceleration);
+        Debug.Log(currentData.yAcceleration);
+    }
+
+    public void LevelComplete()
+    {
+        currentLevel++;
+        
+    }
+}
+
