@@ -41,4 +41,42 @@ public class BallController : MonoBehaviour
         myRGBD.useGravity = false;
         trailRenderer.enabled = false;
     }
+
+    //myRGBD.velocity = new Vector3(myRGBD.velocity.x, myRGBD.velocity.y, myRGBD.velocity.z);
+    /*
+    private void OnTriggerEnter(Collider2D collision)
+    {
+        if (collision.tag == "obstaculoX")
+        {
+            
+            myRGBD.velocity = new Vector3(0, myRGBD.velocity.y, myRGBD.velocity.z);
+        }
+        if (collision.tag == "obstaculoY")
+        {
+            myRGBD.useGravity = false;
+            myRGBD.velocity = new Vector3(myRGBD.velocity.x, 0, myRGBD.velocity.z);
+        }
+        if (collision.tag == "obstaculoGravedad")
+        {
+            myRGBD.useGravity = false;
+        }
+    }
+    */
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "obstaculoX")
+        {
+
+            myRGBD.velocity = new Vector3(0, myRGBD.velocity.y, myRGBD.velocity.z);
+        }
+        if (other.tag == "obstaculoY")
+        {
+            myRGBD.useGravity = false;
+            myRGBD.velocity = new Vector3(myRGBD.velocity.x, 0, myRGBD.velocity.z);
+        }
+        if (other.tag == "obstaculoGravedad")
+        {
+            myRGBD.useGravity = false;
+        }
+    }
 }
