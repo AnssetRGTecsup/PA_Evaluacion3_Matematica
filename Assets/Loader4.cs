@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 
-public class Loader2 : MonoBehaviour
+public class Loader4: MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
