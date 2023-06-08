@@ -41,4 +41,9 @@ public class BallController : MonoBehaviour
         myRGBD.useGravity = false;
         trailRenderer.enabled = false;
     }
+
+    public void QuitarMovementX()
+    {
+        myRGBD.velocity = new Vector3(0, (myRGBD.velocity.y));
+    }
 }
