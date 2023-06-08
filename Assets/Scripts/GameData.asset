@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f927bdcd7cd6bc4993821409f705437, type: 3}
   m_Name: GameData
   m_EditorClassIdentifier: 
-  gravity: -9.81
+  gravity: -9.08
   accelerationModifier: {x: -10, y: -5}
