@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Finnish
+  - obstaculoX
+  - obstaculoY
+  - obstaculoGravedad
   layers:
   - Default
   - TransparentFX

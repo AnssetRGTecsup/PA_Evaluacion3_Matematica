@@ -9,6 +9,8 @@ public class BallController : MonoBehaviour
     [SerializeField] private Rigidbody myRGBD;
     [SerializeField] private Transform originTransform;
     [SerializeField] private TrailRenderer trailRenderer;
+    [SerializeField] private Material material;
+    [SerializeField] private MeshRenderer elMaterial;
     public event Action<Vector2> onLaunch;
 
     private void Start() {
@@ -35,6 +37,7 @@ public class BallController : MonoBehaviour
         transform.position = originTransform.position;
         transform.rotation = Quaternion.identity;
 
+        elMaterial.material = material;
         materialController.ChangeEmissionColor(MaterialChange.Normal);
 
         myRGBD.velocity = Vector3.zero;
@@ -68,15 +71,18 @@ public class BallController : MonoBehaviour
         {
 
             myRGBD.velocity = new Vector3(0, myRGBD.velocity.y, myRGBD.velocity.z);
+            elMaterial.material= other.GetComponent<MeshRenderer>().material;
         }
         if (other.tag == "obstaculoY")
         {
             myRGBD.useGravity = false;
             myRGBD.velocity = new Vector3(myRGBD.velocity.x, 0, myRGBD.velocity.z);
+            elMaterial.material = other.GetComponent<MeshRenderer>().material;
         }
         if (other.tag == "obstaculoGravedad")
         {
             myRGBD.useGravity = false;
+            elMaterial.material = other.GetComponent<MeshRenderer>().material;
         }
     }
 }
