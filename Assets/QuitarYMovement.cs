@@ -8,7 +8,7 @@ public class QuitarYMovement : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            
+            other.GetComponent<BallController>().QuitarMovementY();
         }
     }
 }
