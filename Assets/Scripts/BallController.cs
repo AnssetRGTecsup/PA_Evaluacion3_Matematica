@@ -47,7 +47,7 @@ public class BallController : MonoBehaviour
     {
         myRGBD.velocity = new Vector2(0,velocity.y);
     }*/
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.tag == "PowerUp")
         {
@@ -58,6 +58,10 @@ public class BallController : MonoBehaviour
         {
             aceleracion.accelerationModifier.y = 0;
             myRGBD.velocity = new Vector2(saveVelocity.x, 0);
+        }
+        if (collision.gameObject.tag == "PowerUp3")
+        {
+            myRGBD.useGravity = false;
         }
     }
 }
