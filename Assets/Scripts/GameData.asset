@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: GameData
   m_EditorClassIdentifier: 
   gravity: -9.81
-  accelerationModifier: {x: 0, y: 0}
+  accelerationModifier: {x: -10, y: -5}

@@ -1898,8 +1898,8 @@ GameObject:
   - component: {fileID: 1352963639}
   - component: {fileID: 1352963638}
   - component: {fileID: 1352963637}
-  - component: {fileID: 1352963636}
   - component: {fileID: 1352963635}
+  - component: {fileID: 1352963640}
   m_Layer: 7
   m_Name: StopMovementHorizontal
   m_TagString: Finnish
@@ -1920,19 +1920,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 6.1232336e-17}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1352963636
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1352963634}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ed15c84a853f804d98be971f1fee592, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CurrentLevls: 3
 --- !u!23 &1352963637
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1998,6 +1985,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1352963640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1352963634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aea35d6e3e507ed4db05584ae1d329a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentModifier: 2
 --- !u!1 &1407829653
 GameObject:
   m_ObjectHideFlags: 0
