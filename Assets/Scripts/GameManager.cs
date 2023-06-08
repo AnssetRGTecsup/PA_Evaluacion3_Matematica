@@ -14,4 +14,9 @@ public class GameManager : MonoBehaviour
         Debug.Log(currentData.xAcceleration);
         Debug.Log(currentData.yAcceleration);
     }
+
+    public void QuitarGrativy()
+    {
+        Physics.gravity = new Vector3(currentData.xAcceleration, 0, 0f);
+    }
 }

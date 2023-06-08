@@ -46,4 +46,11 @@ public class BallController : MonoBehaviour
     {
         myRGBD.velocity = new Vector3(0, (myRGBD.velocity.y));
     }
+
+    public void QuitarMovementY()
+    {
+        myRGBD.velocity = new Vector3(myRGBD.velocity.x, 0);
+    }
+
+
 }
