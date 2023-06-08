@@ -21,6 +21,10 @@ public class BallController : MonoBehaviour
         myRGBD.useGravity = false;
         trailRenderer.enabled = false;
     }
+    private void Update()
+    {
+       
+    }
 
     public void LaunchSphere(Vector2 velocity){
         materialController.ChangeEmissionColor(MaterialChange.OnLaunch);
