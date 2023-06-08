@@ -1998,6 +1998,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentModifier: 2
+  _materialController: {fileID: 11400000, guid: 0148dfbe0b499c841ab832282f359e95,
+    type: 2}
 --- !u!1 &1407829653
 GameObject:
   m_ObjectHideFlags: 0
