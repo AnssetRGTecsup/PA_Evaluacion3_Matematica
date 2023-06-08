@@ -32,8 +32,8 @@ public class LineRendererControler : MonoBehaviour
         float t = 0f;
         for (int i = 0; i < lineRenderer.positionCount; i++)
         {
-            float x = velocity * Mathf.Cos(angle) * t + 0.5f * (currentData.xAcceleration) * Mathf.Pow(t,2);
-            float y = velocity * Mathf.Sin(angle) * t - 0.5f * (-Physics.gravity.y + currentData.yAcceleration) * Mathf.Pow(t,2);
+            float x = velocity * Mathf.Cos(angle) * t + 0.5f * (Physics.gravity.x) * Mathf.Pow(t,2);
+            float y = velocity * Mathf.Sin(angle) * t - 0.5f * (-Physics.gravity.y) * Mathf.Pow(t,2);
             lineRenderer.SetPosition(i, originPosition.position + new Vector3(x,y,0));
 
             t += step;
@@ -54,7 +54,7 @@ public class LineRendererControler : MonoBehaviour
         float t = 0f;
         for (int i = 0; i < lineRenderer.positionCount; i++)
         {
-            float x = velocity * Mathf.Cos(angle) * t + 0.5f * (currentData.xAcceleration) * Mathf.Pow(t,2);
+            float x = velocity * Mathf.Cos(angle) * t + 0.5f * (Physics.gravity.x) * Mathf.Pow(t,2);
             float y = velocity * Mathf.Sin(angle) * t - 0.5f * (-Physics.gravity.y) * Mathf.Pow(t,2);
             lineRenderer.SetPosition(i, originPosition.position + new Vector3(x,y,0));
 
