@@ -41,4 +41,20 @@ public class BallController : MonoBehaviour
         myRGBD.useGravity = false;
         trailRenderer.enabled = false;
     }
+    public void ChangeVelocityHorizontal()
+    {
+        Vector2 rgb = myRGBD.velocity;
+        rgb.x = 0;
+        myRGBD.velocity = rgb;
+    }
+    public void ChangeVelocityVertical()
+    {
+        Vector2 rgb = myRGBD.velocity;
+        rgb.y = 0;
+        myRGBD.velocity = rgb;
+    }
+    public void ChangeGravity()
+    {
+        myRGBD.useGravity = false;
+    }
 }
