@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-/*public class FinishController : MonoBehaviour
+public class FinishController : MonoBehaviour
 {
     private void OnCollisionEnter(Collision other) {
         if(other.gameObject.CompareTag("Player")){
@@ -16,8 +16,9 @@ using UnityEngine;
         }
     }
 }
-*/
 
+
+/*
 using UnityEngine;
 
 public class FinishController : MonoBehaviour
@@ -29,4 +30,7 @@ public class FinishController : MonoBehaviour
             Debug.Log("GANO!");
         }
     }
+
 }
+
+*/
