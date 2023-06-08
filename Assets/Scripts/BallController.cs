@@ -9,6 +9,8 @@ public class BallController : MonoBehaviour
     [SerializeField] private Rigidbody myRGBD;
     [SerializeField] private Transform originTransform;
     [SerializeField] private TrailRenderer trailRenderer;
+    [SerializeField] GameDataScriptableObject aceleracion;
+    Vector2 saveVelocity;
     public event Action<Vector2> onLaunch;
 
     private void Start() {
@@ -26,8 +28,8 @@ public class BallController : MonoBehaviour
         materialController.ChangeEmissionColor(MaterialChange.OnLaunch);
 
         myRGBD.velocity = velocity;
+        saveVelocity = velocity;
         myRGBD.useGravity = true;
-
         trailRenderer.enabled = true;
     }
 
@@ -40,5 +42,22 @@ public class BallController : MonoBehaviour
         myRGBD.velocity = Vector3.zero;
         myRGBD.useGravity = false;
         trailRenderer.enabled = false;
+    }
+    /*public void DeleteVelocity(Vector2 velocity)
+    {
+        myRGBD.velocity = new Vector2(0,velocity.y);
+    }*/
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "PowerUp")
+        {
+            aceleracion.accelerationModifier.x = 0;
+            myRGBD.velocity = new Vector2(0, saveVelocity.y);
+        }
+        if (collision.gameObject.tag == "PowerUp2")
+        {
+            aceleracion.accelerationModifier.y = 0;
+            myRGBD.velocity = new Vector2(saveVelocity.x, 0);
+        }
     }
 }
