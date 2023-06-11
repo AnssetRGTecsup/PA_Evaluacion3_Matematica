@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class MouseControls : MonoBehaviour
 {
@@ -66,9 +67,7 @@ public class MouseControls : MonoBehaviour
 
     public void OnRighClick(InputAction.CallbackContext context){
         if(context.performed){
-            ballController.ResetPosition();
-            initGo.SetActive(false);
-            endGo.SetActive(false);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 
@@ -83,7 +82,7 @@ public class MouseControls : MonoBehaviour
         return MultiplyVector3(Camera.main.ScreenToWorldPoint(position), new Vector3(1,1,0));
     }
 
-    public Vector3 MultiplyVector3(Vector3 v1, Vector3 v2){
+    public static Vector3 MultiplyVector3(Vector3 v1, Vector3 v2){
         return new Vector3(v1.x*v2.x, v1.y*v2.y, v1.z*v2.z);
     }
 }

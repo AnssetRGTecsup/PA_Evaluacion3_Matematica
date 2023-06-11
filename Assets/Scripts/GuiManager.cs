@@ -22,7 +22,7 @@ public class GuiManager : MonoBehaviour
 
     private float angleX;
 
-    private void Start() {
+    public void SetUpGUI() {
         gravityText.text = "g = " + currentData.gravity;
 
         xAccText.text = "Acc x = " + currentData.xAcceleration;

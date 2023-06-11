@@ -41,4 +41,13 @@ public class BallController : MonoBehaviour
         myRGBD.useGravity = false;
         trailRenderer.enabled = false;
     }
+
+    public void ModifyPhysics(MaterialChange modifier, Vector3 modifierSpeed){
+        myRGBD.velocity = MouseControls.MultiplyVector3(myRGBD.velocity, modifierSpeed);
+        materialController.ChangeEmissionColor(modifier);
+
+        if(modifier == MaterialChange.OnLooseGravity){
+            GameManager.Instance.UpdatePhysics(false);
+        }
+    }
 }
